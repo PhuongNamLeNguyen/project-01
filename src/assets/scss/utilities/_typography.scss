@@ -1,0 +1,51 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+// Desktop heading
+%h1-dt {
+    @include fontStyles(700, 11rem, 118px);
+}
+%h2-dt {
+    @include fontStyles(500, 6.4rem, 74px);
+}
+%h3-dt {
+    @include fontStyles(500, 4rem, 50px);
+}
+%h4-dt {
+    @include fontStyles(500, 3rem, 40px);
+}
+
+// Mobile heading
+%h1-mb {
+    @include fontStyles(700, 3.6rem, 52px);
+}
+%h2-mb {
+    @include fontStyles(500, 3.6rem, 52px);
+}
+
+// Text
+%text1 {
+    @include fontStyles(500, 2.4rem, 34px);
+}
+%text2 {
+    @include fontStyles(400, 2.2rem, 32px);
+}
+%text3 {
+    @include fontStyles(400, 2rem, 30px);
+}
+%text4 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    @include fontStyles(500, 2.4rem, 34px);
+}
+%text5 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    @include fontStyles($weight: 600);
+}
+%text6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    @include fontStyles();
+}
+%text7 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    @include fontStyles(400, 1.4rem, 24px);
+}

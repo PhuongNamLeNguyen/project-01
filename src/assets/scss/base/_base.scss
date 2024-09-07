@@ -1,0 +1,26 @@
+@use "../utilities" as *;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Libre Bodoni", serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 26px;
+
+    background-color: $bgColor;
+    color: $textColor;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 1170px;
+    max-width: calc(100vw - 36px);
+    margin: 0 auto;
+}

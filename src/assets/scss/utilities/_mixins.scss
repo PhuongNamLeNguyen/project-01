@@ -1,0 +1,14 @@
+// Font styles
+@mixin fontStyles($weight: 400, $size: 1.6rem, $height: 26px) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+
+// Flexbox
+@mixin flexBox($direction: row, $justifyContent: center, $alignItems: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
