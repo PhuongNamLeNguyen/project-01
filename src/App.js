@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import TopBar from "./components/TopBar/TopBar";
 import Footer from "./components/Footer/Footer";
 
-import Home from "./pages/Home";
+import Home from "./pages/HomePage/Home";
 import About from "./pages/About";
 import Menu from "./pages/Menu";
 import Blog from "./pages/Blog";
