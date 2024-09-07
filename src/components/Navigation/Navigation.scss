@@ -1,0 +1,17 @@
+@use "../../assets/scss/utilities" as *;
+.nav {
+    &__list {
+        @include flexBox($justifyContent: flex-start);
+        transform: translateX(-16px)
+    }
+    &__item {
+        &-link {
+            @extend %text6;
+            padding: 6px 16px;
+            color: $linkColor;
+            &.active {
+                color: $linkActiveColor;
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@use "../../assets/scss/utilities" as *;
+
+.footer {
+    .container {
+        padding: 50px 0;
+        display: grid;
+        grid-template-columns: 3.5fr repeat(3, 2fr) 2.5fr;
+        grid-template-rows: repeat(2, 2fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        justify-content: space-between;
+        .logo {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+        .footer {
+            &__nav {
+                grid-row: 1 / -1;
+            }
+            &__contact {
+                grid-row: 1 / -1;
+            }
+            &__social {
+                grid-row: 1 / -1;
+            }
+            &__legal {
+                grid-row: 1 / -1;
+            }
+            &__download {
+                p {
+                    @extend %text6;
+                    color: $linkColor;
+                    max-width: 200px;
+                    margin-bottom: 18px;
+                }
+                ul {
+                    display: flex;
+                    gap: 18px;
+                }
+            }
+        }
+        & [class$="-label"] {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: $textColor;
+            @extend %text5;
+            font-size: 2rem;
+            font-weight: 500;
+
+        }
+        & [class$="-label"] ~ * {
+            @include flexBox(column, flex-start, flex-start);
+            gap: 16px;
+            @extend %text6;
+            color: $linkColor;
+
+        }
+    }
+}

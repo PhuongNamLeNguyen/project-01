@@ -1,0 +1,155 @@
+@use "../utilities" as *;
+
+// Large
+@media (max-width: 1200px) {
+    
+}
+
+// Medium
+@media (max-width: 992px) {
+    #topBar {
+        .container {
+            padding: 20px 0;
+            .topBar {
+                &__nav.nav {
+                    .nav {
+                        &__list {
+                            transform: translateX(-10px)
+                        }
+                        &__item {
+                            &-link {
+                                font-size: 1.4rem;
+                                padding: 6px 10px;
+                            }
+                        }
+                    }
+                }
+                &__logo {
+                    width: 40px;
+                    height: auto;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                &__cta {
+                    gap: 16px;
+                    span {
+                        font-size: 1.4rem;
+                        // display: none;
+                    }
+                    a {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+    #footer {
+        .container {
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(2, 2fr);
+            grid-row-gap: 50px;
+            .logo {
+                grid-row: auto;
+                grid-column: auto;
+            }
+            .footer {
+                &__nav,
+                &__contact,
+                &__social,
+                &__legal {
+                    grid-row: auto;
+                    grid-column: auto;
+                }
+            }
+        }
+    }
+}
+
+// Small
+@media (max-width: 768px) {
+    #topBar {
+        position: relative;
+        .container {
+            justify-content: flex-start;
+            .topBar {
+                &__btn {
+                    display: block;
+                    cursor: pointer;
+                }
+                &__nav.nav {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    visibility: hidden;
+                    .nav {
+                        &__list {
+                            opacity: 0;
+                            visibility: hidden;
+                            display: flex;
+                            justify-content: space-evenly;
+                            flex-direction: column;
+                            width: 100vw;
+                            height: calc(100vh - 93px);
+                            background-color: $bgColor;
+                            transform: translateX(-100%);
+                            border: 1px solid $textColor;
+                            transition: ease-in 0.8s;
+                        }
+                    }
+                    &.active {
+                        .nav {
+                            &__list {
+                                transform: translateX(0);
+                                transition: ease-out 0.8s;
+                                
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+                &__logo {
+                    margin-left: 40px;
+                }
+                &__cta {
+                    margin-left: auto;
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    #footer {
+        .container {
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(5, auto);
+            grid-row-gap: 40px;
+            grid-column-gap: 20px;
+            .logo {
+                grid-row: 1 / 2;
+                grid-column: 1 / -1;
+            }
+            .footer {
+                &__download {
+                    grid-column: 1 / -1;
+                }
+            }
+            & [class$="-label"] {
+                font-size: 1.6rem;
+                margin-bottom: 12px;
+            }
+            & [class$="-label"] ~ * {
+                gap: 8px;
+            }
+        }
+    }
+}
+
+// Extra small
+@media (max-width: 576px) {
+    
+}

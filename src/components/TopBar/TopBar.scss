@@ -3,7 +3,6 @@
 .topBar {
     .container {
         padding: 30px 0;
-        border: 1px solid #fff;
         @include flexBox($justifyContent: space-between);
         .topBar {
             &__btn {
@@ -11,25 +10,12 @@
                 display: none;
             }
             &__nav.nav {
-                .nav {
-                    &__list {
-                        @include flexBox($justifyContent: flex-start);
-                        transform: translateX(-16px)
-                    }
-                    &__item {
-                        &-link {
-                            @extend %text6;
-                            padding: 6px 16px;
-                            color: $linkColor;
-                            &.active {
-                                color: $linkActiveColor;
-                            }
-                        }
-                    }
-                }
+                
             }
             &__logo {
-
+                .logo__name {
+                    display: none;
+                }
             }
             &__cta {
                 @include flexBox($justifyContent: flex-end);
