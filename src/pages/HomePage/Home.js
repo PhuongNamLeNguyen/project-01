@@ -2,6 +2,7 @@ import Hero from "./HeroSection/Hero";
 import Statistics from "./StatisticsSection/Statistics";
 import PopularFood from "./PopularFoodSection/PopularFood";
 import OpeningTimes from "./OpeningTimesSection/OpeningTimes";
+import IntroMenu from "./IntroMenuSection/IntroMenu";
 
 import "./Home.scss";
 
@@ -12,6 +13,7 @@ function Home() {
             <Statistics></Statistics>
             <PopularFood></PopularFood>
             <OpeningTimes></OpeningTimes>
+            <IntroMenu></IntroMenu>
             <p>Our menu</p>
             <p>Visit our restaurant</p>
             <p>Booking</p>

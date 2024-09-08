@@ -1,0 +1,79 @@
+@use "../../../assets/scss/utilities" as *;
+
+.introMenu {
+    margin-top: 100px;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .introMenu {
+            &__sub{
+                @extend %text6;
+                color: $linkColor;
+            }
+            &__heading {
+                margin: 10px 0 20px;
+                @include h2-dt;
+                text-align: center;
+            }
+            &__desc {
+                max-width: 600px;
+                @extend %text6;
+                text-align: center;
+                color: $linkColor;
+            }
+            &__categories {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.categories {
+    margin: 60px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__header {
+        @include flexBox();
+        margin-bottom: 30px;
+        gap: 60px;
+        .label {
+            @include h4-dt;
+            cursor: pointer;
+            &.active {
+                color: $primaryColor;
+                border-bottom: 1px solid $primaryColor;
+            }
+        }
+    }
+    &__container {
+        width: 100%;
+        height: 480px;
+        margin-top: 30px;
+        display: grid;
+        align-items: flex-start;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 40px;
+        .food {
+            display: flex;
+            align-items: center;
+            &__img {
+                display: flex;
+                align-items: center;
+            }
+            &__name {
+                @include h4-dt;
+                margin-left: 20px;
+                max-width: 300px;
+            }
+            &__price {
+                @include h4-dt;
+                margin-left: auto;
+            }
+        }
+    }
+}

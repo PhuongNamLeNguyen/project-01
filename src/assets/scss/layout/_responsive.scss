@@ -134,6 +134,27 @@
                 }
             }
         }
+        .introMenu {
+            
+        }
+        .categories {
+            &__header {
+                gap: 26px;
+            }
+            &__container {
+                .food {
+                    &__name {
+                        font-size: 2.2rem;
+                        line-height: 32px;
+                        max-width: 200px;
+                    }
+                    &__price {
+                        font-size: 2.2rem;
+                        line-height: 32px;
+                    }
+                }
+            }
+        }
     }
     #footer {
         .container {
@@ -292,6 +313,32 @@
                 }
                 .item {
                 }
+            }
+        }
+        .introMenu {
+            margin-top: 20px;
+            .container {
+                .introMenu {
+                    &__heading {
+                        @include h2-mb;
+                        max-width: 348px;
+                    }
+                    &__desc,
+                    &__sub {
+                        font-size: 1.4rem;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+        .categories {
+            &__header {
+                flex-wrap: wrap;
+            }
+            &__container {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: auto;
+                height: auto;
             }
         }
     }
