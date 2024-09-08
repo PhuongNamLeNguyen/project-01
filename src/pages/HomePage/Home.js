@@ -1,4 +1,6 @@
 import Hero from "./HeroSection/Hero";
+import Statistics from "./StatisticsSection/Statistics";
+import PopularFood from "./PopularFoodSection/PopularFood";
 
 import "./Home.scss";
 
@@ -6,8 +8,8 @@ function Home() {
     return (
         <div className="home" id="home">
             <Hero></Hero>
-            <p>Intro section</p>
-            <p>Most popular food</p>
+            <Statistics></Statistics>
+            <PopularFood></PopularFood>
             <p>Opening times</p>
             <p>Our menu</p>
             <p>Visit our restaurant</p>

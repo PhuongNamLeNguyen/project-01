@@ -83,6 +83,47 @@
                 }
             }
         }
+        .statistics {
+            background-image: url(../../img/statistics-02.png);
+            margin: 50px 0;
+            .container {
+                padding: 50px 0;
+                .statistics {
+                    &__list {
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 30px;
+                    }
+                }
+            }
+        }
+        .popularFood {
+            .container {
+                .popularFood {
+                    &__heading {
+                        @include h3-mb;
+                        text-align: center;
+                    }
+                    &__desc {
+                        margin-top: 14px;
+                        font-size: 1.4rem;
+                        line-height: 24px;
+                    }
+                    &__list {
+                        flex-wrap: wrap;
+                        gap: 50px;
+                    }
+                    &__item {
+                        .image {
+                            height: 274px;
+                        }
+                        .desc {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
     }
     #footer {
         .container {
@@ -127,9 +168,8 @@
                     visibility: hidden;
                     .nav {
                         &__list {
+                            z-index: 99;
                             position: absolute;
-                            opacity: 0;
-                            visibility: hidden;
                             display: flex;
                             justify-content: space-evenly;
                             flex-direction: column;
@@ -146,7 +186,7 @@
                             &__list {
                                 transform: translateX(0);
                                 transition: ease-out 0.8s;
-                                z-index: 2;
+                                z-index: 99;
                                 opacity: 1;
                                 visibility: visible;
                             }
@@ -168,7 +208,7 @@
     #home {
         .hero {
             .container {
-                margin-top: 60px;
+                margin-top: 30px;
                 grid-template-columns: 1fr;
                 grid-template-rows: 1fr 1fr;
                 grid-gap: 0;
