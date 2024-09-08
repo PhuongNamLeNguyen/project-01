@@ -1,0 +1,67 @@
+@use "../../../assets/scss/utilities" as *;
+
+.openingTimes {
+    .container {
+        padding: 54px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 360px;
+        // align-items: center;
+        justify-items: center;
+    }
+    &__left {
+        width: 100%;
+        position: relative;
+        background-image: url(../../../assets/img/openingtimes-01.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @include flexBox($direction: column);
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(
+                to right,
+                #11111499,
+                #11111431
+            );
+        }
+        span:not(:first-child) {
+            position: relative;
+            @extend %text6;
+        }
+        .label {
+            margin-bottom: 10px;
+            position: relative;
+            @include h5-dt;
+        }
+    }
+    &__right {
+        width: 100%;
+        @include flexBox($direction: column);
+        background-color: $primaryColor;
+        color: $bgColor;
+        .label {
+            margin-bottom: 10px;
+            @include h5-dt;
+        }
+        .list {
+            width: 300px;
+            @include flexBox($direction: column);
+            gap: 10px;
+        }
+        .item {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            span {
+                font-family: "Plus Jakarta Sans", sans-serif;
+                font-weight: 500;
+            }
+        }
+    }
+}

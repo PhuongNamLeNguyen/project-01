@@ -124,6 +124,16 @@
                 }
             }
         }
+        .openingTimes {
+            .container {
+
+            }
+            &__right {
+                .list {
+                    width: 250px;
+                }
+            }
+        }
     }
     #footer {
         .container {
@@ -265,6 +275,22 @@
                             transform: translate(calc(-50% - 120px), -40px);
                         }
                     }
+                }
+            }
+        }
+        .openingTimes {
+            .container {
+                padding: 20px 0;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(2, 360px);
+            }
+            &__right {
+                // padding: 0 50px;
+                height: 300px;
+                .list {
+                    // width: 85%;
+                }
+                .item {
                 }
             }
         }
