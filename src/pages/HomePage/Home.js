@@ -3,6 +3,7 @@ import Statistics from "./StatisticsSection/Statistics";
 import PopularFood from "./PopularFoodSection/PopularFood";
 import OpeningTimes from "./OpeningTimesSection/OpeningTimes";
 import IntroMenu from "./IntroMenuSection/IntroMenu";
+import RestaurantView from "./RestaurantViewSection/RestaurantView";
 
 import "./Home.scss";
 
@@ -14,8 +15,7 @@ function Home() {
             <PopularFood></PopularFood>
             <OpeningTimes></OpeningTimes>
             <IntroMenu></IntroMenu>
-            <p>Our menu</p>
-            <p>Visit our restaurant</p>
+            <RestaurantView></RestaurantView>
             <p>Booking</p>
             <p>Our Daily offers</p>
             <p>Slide</p>
