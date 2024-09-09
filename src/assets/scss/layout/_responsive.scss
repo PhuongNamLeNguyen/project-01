@@ -226,6 +226,43 @@
                 }
             }
         }
+        .blog {
+            .container {
+                .blog {
+                    &__list {
+                        flex-direction: row;
+                    }
+                    &__item {
+                        flex-direction: column;
+                        .blog {
+                            &__img {
+                                flex-basis: auto;
+                                height: 300px;
+                            }
+                            &__details {
+                                flex-basis: auto;
+                                height: 360px;
+                                .blog {
+                                    &__title {
+                                        font-size: 2.4rem;
+                                        line-height: 34px;
+                                    }
+                                    &__desc {
+                                        font-size: 1.4rem;
+                                        line-height: 24px;
+                                    }
+                                }
+                                .row {
+                                    margin: 0;
+                                    margin-top: auto;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
     }
     #footer {
         .container {
@@ -570,6 +607,30 @@
                     }
                     &__decor {
                         display: none;
+                    }
+                }
+            }
+        }
+        .blog {
+            .container {
+                .blog {
+                    &__heading {
+                        @include h2-mb;
+                        margin: 10px 0 40px;
+                    }
+                    &__list {
+                        flex-direction: column;
+                    }
+                    &__item {
+                        .blog {
+                            &__details {
+                                gap: 12px;
+                                height: auto;
+                            }
+                            &__title {
+                                margin: 12px 0;
+                            }
+                        }
                     }
                 }
             }

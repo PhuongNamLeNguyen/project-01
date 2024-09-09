@@ -8,6 +8,7 @@ import Booking from "./BookingSection/Booking";
 import DailyOffers from "./DailyOffersSection/DailyOffers";
 import Banner from "./BannerSection/Banner";
 import Chefs from "./ChefsSection/Chefs";
+import Blog from "./BlogSection/Blog";
 
 import "./Home.scss";
 
@@ -24,7 +25,7 @@ function Home() {
             <DailyOffers></DailyOffers>
             <Banner></Banner>
             <Chefs></Chefs>
-            {/* <Blog></Blog> */}
+            <Blog></Blog>
             {/* <Newsletter></Newsletter> */}
         </div>
     );
