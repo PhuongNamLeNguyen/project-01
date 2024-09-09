@@ -22,6 +22,16 @@ const PrimaryButton = ({ path, linkName }) => {
     );
 };
 
-const Buttons = { LinkButton, PrimaryButton };
+const SecondaryButton = ({ path, linkName }) => {
+    return (
+        <>
+            <Link className="btn btn--secondary" to={path}>
+                {linkName}
+            </Link>
+        </>
+    );
+};
+
+const Buttons = { LinkButton, PrimaryButton, SecondaryButton };
 
 export default Buttons;

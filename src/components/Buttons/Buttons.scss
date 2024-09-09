@@ -19,3 +19,9 @@
     @extend %text1;
     background-color: $primaryColor;
 }
+
+.btn--secondary {
+    @extend %text1;
+    background-color: $bgColor;
+    color: $textColor;
+}

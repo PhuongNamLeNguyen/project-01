@@ -22,9 +22,9 @@ const Footer = () => {
                 <nav className="footer__nav">
                     <span className="footer__nav-label">Useful Link</span>
                     <ul>
-                        {links.map((item) => {
+                        {links.map((item, index) => {
                             return (
-                                <li>
+                                <li key={index}>
                                     <Link to={item.path}>{item.name}</Link>
                                 </li>
                             );

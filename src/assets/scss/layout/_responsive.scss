@@ -161,6 +161,7 @@
                     &__gallery {
                         grid-template-columns: repeat(2, 1fr);
                         grid-template-rows: repeat(4, 285px);
+                        
                     }
                 }
             }
@@ -362,13 +363,21 @@
                         font-size: 1.4rem;
                     }
                     &__gallery {
+                        width: 95%;
                         margin-top: 40px;
                         grid-template-columns: repeat(1, 1fr);
-                        grid-template-rows: repeat(5, 265px);
+                        grid-template-rows: repeat(1, 265px);
                         &-img {
                             &:nth-child(2) {
                                 grid-row: initial;
                                 grid-column: initial;
+                            }
+                            &:not(:last-child) {
+                                display: none;
+                            }
+                            &:last-child {
+                                width: 100%;
+                                display: block;
                             }
                         }
                     }

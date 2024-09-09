@@ -12,9 +12,9 @@ const Statistics = () => {
         <section className="statistics">
             <div className="container">
                 <ul className="statistics__list">
-                    {stats.map((item) => {
+                    {stats.map((item, index) => {
                         return (
-                            <li className="statistics__item">
+                            <li key={index} className="statistics__item">
                                 <span>{item.number}</span>
                                 <span>{item.label}</span>
                             </li>

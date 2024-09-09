@@ -4,6 +4,7 @@ import PopularFood from "./PopularFoodSection/PopularFood";
 import OpeningTimes from "./OpeningTimesSection/OpeningTimes";
 import IntroMenu from "./IntroMenuSection/IntroMenu";
 import RestaurantView from "./RestaurantViewSection/RestaurantView";
+import Booking from "./BookingSection/Booking";
 
 import "./Home.scss";
 
@@ -16,7 +17,7 @@ function Home() {
             <OpeningTimes></OpeningTimes>
             <IntroMenu></IntroMenu>
             <RestaurantView></RestaurantView>
-            <p>Booking</p>
+            <Booking></Booking>
             <p>Our Daily offers</p>
             <p>Slide</p>
             <p>Chef</p>

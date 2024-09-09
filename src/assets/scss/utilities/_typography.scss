@@ -8,7 +8,7 @@
 @mixin h2-dt {
     @include fontStyles(500, 6.4rem, 74px);
 }
-%h3-dt {
+@mixin h3-dt {
     @include fontStyles(500, 4rem, 50px);
 }
 @mixin h4-dt {

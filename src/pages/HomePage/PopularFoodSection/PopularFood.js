@@ -39,7 +39,7 @@ const RatingStars = ({ rating }) => {
     return (
         <>
             {Array.from({ length: 5 }).map((_, index) => {
-                return <img src={index < rating ? yellowStarIcon : grayStarIcon} alt=""></img>;
+                return <img key={index} src={index < rating ? yellowStarIcon : grayStarIcon} alt=""></img>;
             })}
         </>
     );
@@ -55,9 +55,9 @@ const PopularFood = () => {
                     Check now!
                 </p>
                 <ul className="popularFood__list">
-                    {popularFood.map((food) => {
+                    {popularFood.map((food, index) => {
                         return (
-                            <li className="popularFood__item">
+                            <li key={index} className="popularFood__item">
                                 <div className="image">
                                     <img src={food.image} alt=""></img>
                                 </div>

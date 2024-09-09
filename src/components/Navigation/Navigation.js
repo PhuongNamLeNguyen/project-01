@@ -19,9 +19,9 @@ const Navigation = ({ isMenuOpen, toggleMenu, closeMenu }) => {
     return (
         <nav className={isMenuOpen ? "topBar__nav nav active" : "topBar__nav nav"} onClick={toggleMenu}>
             <ul className="nav__list">
-                {links.map((item) => {
+                {links.map((item, index) => {
                     return (
-                        <li className="nav__item">
+                        <li key={index} className="nav__item">
                             <Link className={getLinkClass(item.path)} to={item.path} onClick={(() => setActiveLink(item.path), closeMenu)}>
                                 {item.name}
                             </Link>

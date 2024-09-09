@@ -1,0 +1,61 @@
+@use "../../../assets/scss/utilities" as *;
+
+.home {
+    .booking {
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .booking {
+                &__left { 
+                    padding: 40px;
+                    background-color: $primaryColor;
+                }
+                &__right {
+
+                }
+
+                &__heading {
+                    @include h3-dt;
+                    color: $bgColor;
+                }
+                &__container {
+                    margin: 40px 0 70px;
+                    display: flex;
+                    gap: 80px;
+                }
+                &__box {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+
+                    .label {
+                        font-weight: 500;
+                        font-size: 2.4rem;
+                        line-height: 34px;
+                        color: $bgColor;
+                    }
+                    .count {
+                        @include h3-dt;
+                        color: $bgColor;
+                    }
+                    .buttons {
+                        position: absolute;
+                        top: 50%;
+                        left: 80px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        img {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .btn {
+                @extend %text6;
+                width: 300px;
+                height: 56px;
+            }
+        }
+    }
+}

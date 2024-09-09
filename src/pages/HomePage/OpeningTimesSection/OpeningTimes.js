@@ -24,9 +24,9 @@ const OpeningTimes = () => {
                 <div className="openingTimes__right">
                     <span className="label">Opening Times</span>
                     <ul className="list">
-                        {openingTimes.map((opening) => {
+                        {openingTimes.map((opening, index) => {
                             return (
-                                <li className="item">
+                                <li key={index} className="item">
                                     <span className="day">{opening.day}</span>
                                     <span className="times">{opening.times}</span>
                                 </li>
