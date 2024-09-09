@@ -6,6 +6,7 @@ import IntroMenu from "./IntroMenuSection/IntroMenu";
 import RestaurantView from "./RestaurantViewSection/RestaurantView";
 import Booking from "./BookingSection/Booking";
 import DailyOffers from "./DailyOffersSection/DailyOffers";
+import Banner from "./BannerSection/Banner";
 
 import "./Home.scss";
 
@@ -20,8 +21,7 @@ function Home() {
             <RestaurantView></RestaurantView>
             <Booking></Booking>
             <DailyOffers></DailyOffers>
-            <p>Our Daily offers</p>
-            <p>Slide</p>
+            <Banner></Banner>
             <p>Chef</p>
             <p>Blog</p>
             <p>Newsletter</p>

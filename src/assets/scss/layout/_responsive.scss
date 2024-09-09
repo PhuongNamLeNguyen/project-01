@@ -516,6 +516,25 @@
                 }
             }
         }
+        .banner {
+            margin: 60px auto;
+            padding: 18px 0;
+            width: 100%;
+            &__list {
+                transform: translateX(100%);
+                animation: marqueeMobile 8s 0s linear infinite;
+                gap: 45px;
+            }
+            &__item {
+                gap: 12px;
+                .item {
+                    &__name {
+                        font-size: 2.4rem;
+                        line-height: 34px;
+                    }
+                }
+            }
+        }
     }
     #footer {
         .container {
