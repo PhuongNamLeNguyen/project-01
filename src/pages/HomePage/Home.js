@@ -7,6 +7,7 @@ import RestaurantView from "./RestaurantViewSection/RestaurantView";
 import Booking from "./BookingSection/Booking";
 import DailyOffers from "./DailyOffersSection/DailyOffers";
 import Banner from "./BannerSection/Banner";
+import Chefs from "./ChefsSection/Chefs";
 
 import "./Home.scss";
 
@@ -22,9 +23,9 @@ function Home() {
             <Booking></Booking>
             <DailyOffers></DailyOffers>
             <Banner></Banner>
-            <p>Chef</p>
-            <p>Blog</p>
-            <p>Newsletter</p>
+            <Chefs></Chefs>
+            {/* <Blog></Blog> */}
+            {/* <Newsletter></Newsletter> */}
         </div>
     );
 }

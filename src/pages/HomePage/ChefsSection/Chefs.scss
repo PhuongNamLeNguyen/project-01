@@ -1,0 +1,58 @@
+@use "../../../assets/scss/utilities" as *;
+
+.chefs {
+    margin-bottom: 80px;
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .chefs {
+            &__heading {
+                @include h2-dt;
+                text-align: center;
+            }
+            &__desc {
+                margin: 16px 0 40px;
+                max-width: 760px;
+                @extend %text6;
+                text-align: center;
+            }
+            &__list {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 30px;
+                .chef {
+                    &__details {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    &__img {
+                        height: 442px;
+                        border: 1px solid $textColor;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover
+                        }
+                    }
+                    &__name {
+                        @include h4-dt;
+                        margin-top: 30px;
+                    }
+                    &__job {
+                        @extend %text5;
+                    }
+                }
+            }
+            &__decor {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translate(-50%, 100%);
+            }
+        }
+    }
+}
