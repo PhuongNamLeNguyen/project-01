@@ -1,0 +1,60 @@
+@use "../../../assets/scss/utilities" as *;
+
+.newsletter {
+    position: relative;
+    background-image: url(../../../assets/img/newsletter-01.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+            to right,
+            #111114cb,
+            #111114cc
+        )
+    }
+    .container {
+        padding: 70px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .content {
+            position: relative;
+            // margin-left: 130px;
+        }
+        .form {
+            position: relative;
+            // margin-right: 130px;
+            input {
+                width: 470px;
+                color: $textColor;
+                @extend %text6; 
+                padding-bottom: 28px;
+                border-bottom: 2px solid $textColor; 
+            }
+            img {
+                width: 30px;
+                height: 30px;
+                transform: translate(-100%, 10px)
+            }
+        }
+        .newsletter {
+            &__heading {
+                @include h3-dt;
+                max-width: 400px;
+                margin-bottom: 20px;
+            }
+            &__desc {
+                @extend %text6;
+                max-width: 400px;
+                color: $linkColor;
+            }
+        }
+    }
+}

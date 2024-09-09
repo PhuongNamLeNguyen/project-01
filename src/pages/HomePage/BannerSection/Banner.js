@@ -15,18 +15,20 @@ const bannerItems = [
 const Banner = () => {
     return (
         <section className="banner">
-            <ul className="banner__list">
-                {bannerItems.map((item) => {
-                    return (
-                        <li className="banner__item">
-                            <div className="item__img">
-                                <img src={item.image} alt=""></img>
-                            </div>
-                            <span className="item__name">{item.name}</span>
-                        </li>
-                    );
-                })}
-            </ul>
+            <div className="container">
+                <ul className="banner__list">
+                    {bannerItems.map((item) => {
+                        return (
+                            <li className="banner__item">
+                                <div className="item__img">
+                                    <img src={item.image} alt=""></img>
+                                </div>
+                                <span className="item__name">{item.name}</span>
+                            </li>
+                        );
+                    })}
+                </ul>
+            </div>
         </section>
     );
 };

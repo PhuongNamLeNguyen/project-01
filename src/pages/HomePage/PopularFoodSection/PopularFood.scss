@@ -1,9 +1,7 @@
 @use "../../../assets/scss/utilities" as *;
 
 .popularFood {
-    margin-bottom: 50px;
     .container {
-        padding: 50px 0;
         @include flexBox($direction: column);
         .popularFood {
             &__heading {

@@ -19,6 +19,13 @@ a {
     color: inherit;
 }
 
+input {
+    font: inherit;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
 .container {
     width: 1170px;
     max-width: calc(100vw - 48px);

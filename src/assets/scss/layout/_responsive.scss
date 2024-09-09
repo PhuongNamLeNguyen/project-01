@@ -47,6 +47,8 @@
         }
     }
     #home {
+        margin: 40px 0;
+        gap: 100px;
         .hero {
             .container {
                 .hero {
@@ -263,6 +265,24 @@
                 }
             }
         }
+        .newsletter {
+            .container {
+                .form {
+                    input {
+                        width: 300px;
+                    }
+                }
+                .newsletter {
+                    &__heading {
+                        max-width: 300px;
+                        @include h2-mb;
+                    }
+                    &__desc {
+                        max-width: 300px;
+                    }
+                }
+            }
+        }
     }
     #footer {
         .container {
@@ -345,6 +365,7 @@
         }
     }
     #home {
+        gap: 40px;
         .hero {
             .container {
                 margin-top: 30px;
@@ -635,6 +656,38 @@
                 }
             }
         }
+        .newsletter {
+            .container {
+                flex-direction: column;
+                .content {
+                    width: 475px;
+                }
+                .newsletter {
+                    &__heading {
+                        max-width: 100%;
+                        text-align: center;
+                    }
+                    &__desc {
+                        max-width: 100%;
+                        text-align: center;
+                    }
+                }
+                .form {
+                    width: 475px;
+                    margin-top: 50px;
+                    position: relative;
+                    input {
+                        width: 100%;
+                    }
+                    img {
+                        position: absolute;
+                        top: -6px;
+                        right: 0;
+                        transform: translateX(20%);
+                    }
+                }
+            }
+        }
     }
     #footer {
         .container {
@@ -710,6 +763,30 @@
                                 height: 420px;
                             }
                         }
+                    }
+                }
+            }
+        }
+        .newsletter {
+            .container {
+                .content {
+                    width: 100%;
+                }
+                .newsletter {
+                    &__heading {
+                    }
+                    &__desc {
+                    }
+                }
+                .form {
+                    width: 100%;
+                    input {
+                    }
+                    img {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        transform: translateX(20%);
                     }
                 }
             }

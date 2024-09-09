@@ -1,11 +1,11 @@
 @use "../../../assets/scss/utilities" as *;
 
 .banner {
-    max-width: 1400px;
-    margin: 80px auto 150px;
     padding: 40px 0;
     background-color: $primaryColor;
-    overflow: hidden;
+    .container {
+        overflow: hidden;
+    }
     &__list {
         display: flex;
         justify-content: center;
@@ -31,10 +31,10 @@
 
 @keyframes marquee {
     0% {
-        transform: translateX(100%);
+        transform: translateX(120%);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-120%);
     }
 }
 

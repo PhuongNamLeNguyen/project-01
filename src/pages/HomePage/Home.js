@@ -9,12 +9,13 @@ import DailyOffers from "./DailyOffersSection/DailyOffers";
 import Banner from "./BannerSection/Banner";
 import Chefs from "./ChefsSection/Chefs";
 import Blog from "./BlogSection/Blog";
+import Newsletter from "./NewsletterSection/Newsletter";
 
 import "./Home.scss";
 
 function Home() {
     return (
-        <div className="home" id="home">
+        <main className="home" id="home">
             <Hero></Hero>
             <Statistics></Statistics>
             <PopularFood></PopularFood>
@@ -26,8 +27,8 @@ function Home() {
             <Banner></Banner>
             <Chefs></Chefs>
             <Blog></Blog>
-            {/* <Newsletter></Newsletter> */}
-        </div>
+            <Newsletter></Newsletter>
+        </main>
     );
 }
 
