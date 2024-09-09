@@ -166,6 +166,29 @@
                 }
             }
         }
+        .booking {
+            .container {
+                grid-template-rows: auto 530px ;
+                grid-template-columns: 1fr;
+                .booking {
+                    &__left {
+                        padding: 40px 20px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    &__right {
+                        .decor {
+                            display: none;
+                        }
+                    }
+                    &__container {
+                        justify-content: center;
+                        transform: translateX(-20px);
+                    }
+                }
+            }
+        }
     }
     #footer {
         .container {
@@ -381,6 +404,39 @@
                             }
                         }
                     }
+                    &__dotSlide {
+                        display: flex;
+                    }
+                }
+            }
+        }
+        .booking {
+            .container {
+                grid-template-rows: auto 430px;
+                .booking {
+                    &__container {
+                        margin: 20px 0 40px;
+                        gap: 60px;
+                        flex-wrap: wrap;
+                    }
+                    &__heading {
+                        text-align: center;
+                        font-size: 3rem;
+                    }
+                    &__box {
+                        .label {
+                            font-size: 1.4rem;
+                            line-height: 24px;
+                        }
+                        .count {
+                            font-size: 3rem;
+                            line-height: 24px;
+                        }
+                        .buttons {
+                            bottom: 0;
+                            left: 80px;
+                        }
+                    }
                 }
             }
         }
@@ -413,5 +469,23 @@
 
 // Extra small
 @media (max-width: 576px) {
-    
+    #home {
+        .booking {
+            .container {
+                grid-template-rows: auto 300px;
+                .booking {
+                    &__container {
+                        justify-content: flex-start;
+                        transform: translateX(-15px);
+                    }
+                    &__left {
+                        .btn {
+                            width: 100%;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
 }

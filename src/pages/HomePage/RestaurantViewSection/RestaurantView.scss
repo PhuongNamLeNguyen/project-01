@@ -41,8 +41,9 @@
                 }
             }
             &__dotSlide {
+                display: none;
                 margin-top: 30px;
-                display: flex;
+                // display: flex;
                 align-items: center;
                 gap: 8px;
                 .dot {

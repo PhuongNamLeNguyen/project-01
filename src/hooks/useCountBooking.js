@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-// const currentYear = new Date().getFullYear();
-const currentMonth = new Date().getMonth();
-
 const useCountBooking = () => {
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const daysInMonth = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    const [date, setDate] = useState(1);
+    const [month, setMonth] = useState(0);
     const [guestCount, setGuestCount] = useState(1);
 
     const guestIncrease = () => {
@@ -19,12 +19,10 @@ const useCountBooking = () => {
         }
     };
 
-    const [date, setDate] = useState(1);
-
     const dateIncrease = () => {
-        if (currentMonth % 2 === 0 && date < 31) {
-            setDate(date + 1);
-        } else if (currentMonth % 2 !== 0 && date < 30) {
+        const maxDateIndex = month;
+        const maxDate = daysInMonth[maxDateIndex];
+        if (date < maxDate) {
             setDate(date + 1);
         }
     };
@@ -35,17 +33,17 @@ const useCountBooking = () => {
         }
     };
 
-    const [month, setMonth] = useState(0);
-
     const monthIncrease = () => {
         if (month < 11) {
             setMonth(month + 1);
+            setDate(1);
         }
     };
 
     const monthDecrease = () => {
         if (month > 0) {
             setMonth(month - 1);
+            setDate(1);
         }
     };
 

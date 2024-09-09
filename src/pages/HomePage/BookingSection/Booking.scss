@@ -2,16 +2,44 @@
 
 .home {
     .booking {
+        margin: 50px 0;
         .container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(1, 400px);
             .booking {
                 &__left { 
                     padding: 40px;
                     background-color: $primaryColor;
                 }
                 &__right {
-
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        background-image: linear-gradient(
+                            to right,
+                            #11111499,
+                            #1111141f
+                        );
+                    }
+                    .bgImage {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        opacity: 0.4;
+                        border: 1px solid $textColor;
+                    }
+                    .decor {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        transform: translate(80%, -80%);
+                        width: 100px;
+                        height: auto;
+                    }
                 }
 
                 &__heading {
@@ -21,12 +49,15 @@
                 &__container {
                     margin: 40px 0 70px;
                     display: flex;
-                    gap: 80px;
+                    gap: 80px;                    
                 }
                 &__box {
+                    width: 80px;
                     position: relative;
                     display: flex;
                     flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
 
                     .label {
                         font-weight: 500;
@@ -40,12 +71,14 @@
                     }
                     .buttons {
                         position: absolute;
-                        top: 50%;
-                        left: 80px;
+                        bottom: 6px;
+                        left: 90px;
                         display: flex;
                         flex-direction: column;
-                        gap: 15px;
+                        gap: 10px;
                         img {
+                            // background-color: red;
+                            padding: 6px;
                             cursor: pointer;
                         }
                     }
