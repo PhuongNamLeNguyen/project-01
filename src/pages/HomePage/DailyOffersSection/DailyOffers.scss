@@ -1,0 +1,116 @@
+@use "../../../assets/scss/utilities" as *;
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+.dailyOffers {
+    .container {
+        padding: 60px 0;
+        .dailyOffers {
+            &__heading {
+                text-align: center;
+                @include h2-dt;
+                margin-bottom: 50px;
+            }
+            &__main {
+                display: grid;
+                grid-template-rows: repeat(3, 120px);
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 36px 30px;
+                .dailyOffers {
+                    &__event {
+                        position: relative;
+                        grid-row: 1 / -1;
+                        grid-column: 1 / 2;
+                        background-image: url(../../../assets/img/dailyoffers-01.avif);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        &::before {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            background-image: linear-gradient(
+                                to right,
+                                #1D1D1B,
+                                #47454500
+                            );
+                        }
+                        .content {
+                            position: relative;
+                            margin: 20px 30px;
+                            padding-left: 40px;
+                            border: 1px solid $linkColor;
+                            &__heading {
+                                margin-top: 70px;
+                                max-width: 250px;
+                                @extend %text4;
+                                font-weight: 600;
+                                font-size: 2.8rem;
+                                line-height: 38px;
+                                strong {
+                                    font-family: "Playball";
+                                    font-weight: 400;
+                                    font-size: 8.4rem;
+                                    line-height: 82px;
+                                    letter-spacing: -3px;
+                                    color: $primaryColor;
+                                }
+                            }
+                            &__desc {
+                                margin: 14px 0 40px;
+                                max-width: 250px;
+                                @extend %text6;
+                            }
+                            .btn {
+                                margin-bottom: 40px;
+                                width: 145px;
+                                height: 40px;
+                                border: none;
+                                background-color: $primaryColor;
+                                color: $textColor;
+                            }
+                        }
+                    }
+                    &__food {
+                        display: flex;
+                        gap: 28px;
+                        .food {
+                            &__img {
+                                flex: 0 0 130px;
+                                // width: 200px;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                            &__info {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                gap: 16px;
+                                .row {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                }
+                            }
+                            &__name,
+                            &__price {
+                                @include h5-dt;
+                            }
+                            &__desc {
+                                @extend %text6;
+                                max-width: 320px;
+                                color: $linkColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
