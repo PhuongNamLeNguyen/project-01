@@ -17,9 +17,9 @@ const Banner = () => {
         <section className="banner">
             <div className="container">
                 <ul className="banner__list">
-                    {bannerItems.map((item) => {
+                    {bannerItems.map((item, index) => {
                         return (
-                            <li className="banner__item">
+                            <li key={index} className="banner__item">
                                 <div className="item__img">
                                     <img src={item.image} alt=""></img>
                                 </div>

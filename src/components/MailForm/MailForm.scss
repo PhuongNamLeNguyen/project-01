@@ -1,0 +1,21 @@
+@use "../../assets/scss/utilities" as *;
+
+.newsletter {
+    .container {
+        .form {
+            position: relative;
+            input {
+                width: 470px;
+                color: $textColor;
+                @extend %text6;
+                padding-bottom: 28px;
+                border-bottom: 2px solid $textColor;
+            }
+            img {
+                width: 30px;
+                height: 30px;
+                transform: translate(-100%, 10px);
+            }
+        }
+    }
+}

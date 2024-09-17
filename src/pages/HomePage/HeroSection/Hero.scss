@@ -1,71 +1,72 @@
 @use "../../../assets/scss/utilities" as *;
 
-.hero {
-    .container {
-        display: grid;
-        grid-template-columns: 7fr 4fr 1fr;
-        grid-column-gap: 30px;
-        align-items: center;
-        .hero {
-            &__textBox {
-                .hero {
-                    &__subHeading,
-                    &__desc {
-                        @extend %text6;
-                        color: $linkColor;
+.home {
+    .hero {
+        .container {
+            display: grid;
+            grid-template-columns: 7fr 4fr 1fr;
+            grid-column-gap: 30px;
+            align-items: center;
+            .hero {
+                &__textBox {
+                    .hero {
+                        &__subHeading,
+                        &__desc {
+                            @extend %text6;
+                            color: $linkColor;
+                        }
+                        &__heading {
+                            margin: 10px 0 20px;
+                            @include h2-dt;
+                            color: $textColor;
+                        }
+                        &__desc {
+                            max-width: 530px;
+                        }
                     }
-                    &__heading {
-                        margin: 10px 0 20px;
-                        @include h2-dt;
-                        color: $textColor;
-                    }
-                    &__desc {
-                        max-width: 530px;
+                    .btn {
+                        margin-top: 40px;
+                        width: initial;
+                        height: initial;
                     }
                 }
-                .btn {
-                    margin-top: 40px;
-                    width: initial;
-                    height: initial;
-                }
-            }
-            &__imgBox {
-                position: relative;
-                img {
-                    &:not(:first-child) {
+                &__imgBox {
+                    position: relative;
+                    img {
+                        &:not(:first-child) {
+                            position: absolute;
+                            width: 80px;
+                            height: auto;
+                        }
+                        // &:nth-child(1) {
+                        //     top: 0;
+                        //     left: 0;
+                        // }
+                        &:nth-child(2) {
+                            top: 60px;
+                            right: 0;
+                            transform: translateX(100%);
+                        }
+                        &:nth-child(3) {
+                            top: 180px;
+                            right: 0;
+                            transform: translateX(calc(100% + 20px));
+                        }
+                        &:nth-child(4) {
+                            bottom: 70px;
+                            right: 0;
+                            transform: translateX(100%);
+                        }
+                    }
+                    .btn {
                         position: absolute;
-                        width: 80px;
-                        height: auto;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translate(calc(-50% - 140px), -60px);
+                        width: 136px;
+                        height: 54px;
+                        @include fontStyles(500, 2.4rem, 34px);
                     }
-                    // &:nth-child(1) {
-                    //     top: 0;
-                    //     left: 0;
-                    // }
-                    &:nth-child(2) {
-                        top: 60px;
-                        right: 0;
-                        transform: translateX(100%);
-                    }
-                    &:nth-child(3) {
-                        top: 180px;
-                        right: 0;
-                        transform: translateX(calc(100% + 20px));
-                    }
-                    &:nth-child(4) {
-                        bottom: 70px;
-                        right: 0;
-                        transform: translateX(100%);
-                    }
-                }
-                .btn {
-                    position: absolute;
-                    bottom: 0;
-                    left: 50%;
-                    transform: translate(calc(-50% - 140px), -60px);
-                    width: 136px;
-                    height: 54px;
-                    @include fontStyles(500, 2.4rem, 34px)
-
                 }
             }
         }

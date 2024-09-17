@@ -6,7 +6,7 @@ import TopBar from "./components/TopBar/TopBar";
 import Footer from "./components/Footer/Footer";
 
 import Home from "./pages/HomePage/Home";
-import About from "./pages/About";
+import About from "./pages/AboutPage/About";
 import Menu from "./pages/Menu";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";

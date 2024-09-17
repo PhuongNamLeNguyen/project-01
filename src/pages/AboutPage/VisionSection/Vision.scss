@@ -1,0 +1,96 @@
+@use "../../../assets/scss/utilities" as *;
+
+.about {
+    .vision {
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .vision {
+                &__heading {
+                    text-align: center;
+                    @include h2-dt;
+                    margin-bottom: 16px;
+                }
+                &__desc {
+                    text-align: center;
+                    @extend %text6;
+                    color: $linkColor;
+                    max-width: 800px;
+                }
+            }
+            .row {
+                margin-top: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                .vision {
+                    &__img {
+                        flex: 0 0 45%;
+                        height: 570px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    &__content {
+                        flex: 0 0 45%;
+                        .list {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 50px;
+                            .item {
+                                display: flex;
+                                align-items: center;
+                                gap: 30px;
+                                &__details {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 8px;
+                                }
+                                &__title {
+                                    @include h5-dt;
+                                }
+                                &__desc {
+                                    @extend %text6;
+                                    color: $linkColor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        .vision {
+            .container {
+                .vision {
+                    &__heading {
+                        @include h2-mb;
+                    }
+                    &__desc {
+                        font-size: 1.4rem;
+                        line-height: 24px;
+                    }
+                }
+                .row {
+                    flex-direction: column;
+                    gap: 30px;
+                    .vision {
+                        &__content {
+                            .list {
+                                gap: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

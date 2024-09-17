@@ -1,7 +1,5 @@
 import "./PopularFood.scss";
 
-import { Link } from "react-router-dom";
-
 import Buttons from "../../../components/Buttons/Buttons";
 
 import popularFood1 from "../../../assets/img/popular-01.png";
@@ -39,7 +37,13 @@ const RatingStars = ({ rating }) => {
     return (
         <>
             {Array.from({ length: 5 }).map((_, index) => {
-                return <img key={index} src={index < rating ? yellowStarIcon : grayStarIcon} alt=""></img>;
+                return (
+                    <img
+                        key={index}
+                        src={index < rating ? yellowStarIcon : grayStarIcon}
+                        alt=""
+                    ></img>
+                );
             })}
         </>
     );
@@ -51,8 +55,9 @@ const PopularFood = () => {
             <div className="container">
                 <h2 className="popularFood__heading">Most popular food</h2>
                 <p className="popularFood__desc">
-                    A list of most popular Bangladeshi food including mains, drinks, and deserts you must try while in Bangladesh, for an authentic experience.
-                    Check now!
+                    A list of most popular Bangladeshi food including mains,
+                    drinks, and deserts you must try while in Bangladesh, for an
+                    authentic experience. Check now!
                 </p>
                 <ul className="popularFood__list">
                     {popularFood.map((food, index) => {
@@ -63,14 +68,23 @@ const PopularFood = () => {
                                 </div>
                                 <div className="details">
                                     <div className="row">
-                                        <span className="name">{food.name}</span>
-                                        <span className="price">{food.price}</span>
+                                        <span className="name">
+                                            {food.name}
+                                        </span>
+                                        <span className="price">
+                                            {food.price}
+                                        </span>
                                     </div>
                                     <p className="desc">{food.desc}</p>
                                     <div className="row">
-                                        <Buttons.LinkButton path="/booking" linkName="Order now"></Buttons.LinkButton>
+                                        <Buttons.LinkButton
+                                            path="/booking"
+                                            linkName="Order now"
+                                        ></Buttons.LinkButton>
                                         <div className="rating">
-                                            <RatingStars rating={food.rating}></RatingStars>
+                                            <RatingStars
+                                                rating={food.rating}
+                                            ></RatingStars>
                                         </div>
                                     </div>
                                 </div>
@@ -78,10 +92,13 @@ const PopularFood = () => {
                         );
                     })}
                 </ul>
-                <Link to="/menu" className="popularFood__btn">
-                    <Buttons.LinkButton path="/menu" linkName="Explore All Food"></Buttons.LinkButton>
+                <div className="popularFood__btn">
+                    <Buttons.LinkButton
+                        path="/menu"
+                        linkName="Explore All Food"
+                    ></Buttons.LinkButton>
                     <img src={arrowRight} alt=""></img>
-                </Link>
+                </div>
             </div>
         </section>
     );

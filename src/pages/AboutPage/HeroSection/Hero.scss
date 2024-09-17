@@ -1,0 +1,39 @@
+@use "../../../assets/scss/utilities" as *;
+
+.about {
+    .hero {
+        border-bottom: 2px solid #ffffff30;
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            // padding: 70px 0;
+        }
+        &__heading {
+            @include h2-dt;
+            max-width: 870px;
+        }
+        &__desc {
+            @extend %text6;
+            color: $linkColor;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        .hero {
+            .container {
+                padding: 50px 0;
+            }
+            &__heading {
+                @include h1-mb;
+            }
+
+            &__desc {
+                font-size: 1.4rem;
+                line-height: 24px;
+            }
+        }
+    }
+}

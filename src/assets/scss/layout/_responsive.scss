@@ -2,7 +2,6 @@
 
 // Large
 @media (max-width: 1200px) {
-    
 }
 
 // Medium
@@ -14,7 +13,7 @@
                 &__nav.nav {
                     .nav {
                         &__list {
-                            transform: translateX(-10px)
+                            transform: translateX(-10px);
                         }
                         &__item {
                             &-link {
@@ -53,7 +52,6 @@
             .container {
                 .hero {
                     &__textBox {
-
                     }
                     &__imgBox {
                         img {
@@ -79,7 +77,6 @@
                             @include fontStyles(500, 1.6rem, 26px);
                             width: 85px;
                             height: 36px;
-
                         }
                     }
                 }
@@ -128,7 +125,6 @@
         }
         .openingTimes {
             .container {
-
             }
             &__right {
                 .list {
@@ -137,7 +133,6 @@
             }
         }
         .introMenu {
-            
         }
         .categories {
             &__header {
@@ -163,14 +158,13 @@
                     &__gallery {
                         grid-template-columns: repeat(2, 1fr);
                         grid-template-rows: repeat(4, 285px);
-                        
                     }
                 }
             }
         }
         .booking {
             .container {
-                grid-template-rows: auto 530px ;
+                grid-template-rows: auto 530px;
                 grid-template-columns: 1fr;
                 .booking {
                     &__left {
@@ -259,7 +253,6 @@
                                     margin-top: auto;
                                 }
                             }
-                            
                         }
                     }
                 }
@@ -406,12 +399,12 @@
                             &:nth-child(2) {
                                 top: 0;
                                 right: 50%;
-                                transform: translate(calc(50% + 90px) , 20px);
+                                transform: translate(calc(50% + 90px), 20px);
                             }
                             &:nth-child(3) {
                                 top: 50%;
                                 right: 50%;
-                                transform: translate(calc(50% + 120px) , -50%);
+                                transform: translate(calc(50% + 120px), -50%);
                             }
                             &:nth-child(4) {
                                 bottom: 0;
@@ -730,7 +723,6 @@
                         .btn {
                             width: 100%;
                         }
-
                     }
                 }
             }

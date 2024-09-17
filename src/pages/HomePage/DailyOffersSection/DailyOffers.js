@@ -38,20 +38,30 @@ const DailyOffers = () => {
                             <h3 className="content__heading">
                                 Lunch Time <strong>30%</strong> off
                             </h3>
-                            <p className="content__desc">We love food, lots of different and food, just like you.</p>
-                            <Buttons.LinkButton path="/booking" linkName="Order now"></Buttons.LinkButton>
+                            <p className="content__desc">
+                                We love food, lots of different and food, just
+                                like you.
+                            </p>
+                            <Buttons.LinkButton
+                                path="/booking"
+                                linkName="Order now"
+                            ></Buttons.LinkButton>
                         </div>
                     </div>
-                    {dailyFoods.map((food) => {
+                    {dailyFoods.map((food, index) => {
                         return (
-                            <div className="dailyOffers__food">
+                            <div key={index} className="dailyOffers__food">
                                 <div className="food__img">
                                     <img src={food.image} alt=""></img>
                                 </div>
                                 <div className="food__info">
                                     <div className="row">
-                                        <h4 className="food__name">{food.name}</h4>
-                                        <span className="food__price">{food.price}</span>
+                                        <h4 className="food__name">
+                                            {food.name}
+                                        </h4>
+                                        <span className="food__price">
+                                            {food.price}
+                                        </span>
                                     </div>
                                     <p className="food__desc">{food.desc}</p>
                                 </div>

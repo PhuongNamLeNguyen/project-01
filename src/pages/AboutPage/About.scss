@@ -1,0 +1,21 @@
+@use "../../assets/scss/utilities" as *;
+
+.about {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+
+    section {
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        gap: 80px;
+        section {
+            padding: 20px 0;
+        }
+    }
+}

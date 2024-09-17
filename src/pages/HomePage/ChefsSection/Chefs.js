@@ -17,13 +17,15 @@ const Chefs = () => {
             <div className="container">
                 <h2 className="chefs__heading">They will cook for you</h2>
                 <p className="chefs__desc">
-                    Our Diners can enjoy cooking for themselves, or visiting a curated selection of restaurants in the area. They will cook for you and make
-                    sure you have a home away from home at all times.
+                    Our Diners can enjoy cooking for themselves, or visiting a
+                    curated selection of restaurants in the area. They will cook
+                    for you and make sure you have a home away from home at all
+                    times.
                 </p>
                 <ul className="chefs__list">
-                    {chefs.map((chef) => {
+                    {chefs.map((chef, index) => {
                         return (
-                            <li className="chef__details">
+                            <li key={index} className="chef__details">
                                 <div className="chef__img">
                                     <img src={chef.image} alt=""></img>
                                 </div>
